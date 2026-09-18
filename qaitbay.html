@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>قلعة الأشرف قايتباي | بوابة الإسكندرية الخالدة</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;600;700;800&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#0a192f',
+              blue: '#0B2545',
+              gold: '#C5A880',
+              goldHover: '#b39366',
+              sand: '#F7F5F0',
+            }
+          },
+          fontFamily: {
+            heading: ['Alexandria', 'sans-serif'],
+            body: ['Cairo', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Cairo', sans-serif; background-color: #F7F5F0; color: #1e293b; }
+    h1, h2, h3, h4, .brand-title { font-family: 'Alexandria', sans-serif; }
+    .hero-gradient { background: linear-gradient(180deg, rgba(11, 37, 69, 0.8) 0%, rgba(10, 25, 47, 0.95) 100%); }
+  </style>
+</head>
+<body class="bg-brand-sand selection:bg-brand-gold selection:text-white">
+
+  <!-- Header / Navbar -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200/80 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-xl bg-brand-blue flex items-center justify-center text-brand-gold shadow-md">
+            <i class="fa-solid fa-landmark-dome text-xl"></i>
+          </div>
+          <div>
+            <span class="block text-xl font-extrabold text-brand-blue brand-title leading-tight tracking-wide">الإسكندرية الخالدة</span>
+            <span class="text-xs text-brand-gold font-bold tracking-wider">عروس البحر المتوسط</span>
+          </div>
+        </a>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-bold text-slate-700">
+        <a href="index.html" class="text-brand-blue hover:text-brand-gold transition flex items-center gap-1.5">
+          <i class="fa-solid fa-arrow-right text-xs"></i> العودة للرئيسية
+        </a>
+        <a href="index.html#monuments" class="hover:text-brand-gold transition">باقي المعالم</a>
+        <a href="#info" class="hover:text-brand-gold transition">الخلفية التاريخية</a>
+        <a href="#visiting" class="hover:text-brand-gold transition">المواعيد والأسعار</a>
+      </nav>
+
+      <div>
+        <a href="index.html#map-section" class="bg-brand-gold hover:bg-brand-goldHover text-white px-5 py-2.5 rounded-xl font-bold text-sm shadow-sm transition flex items-center gap-2">
+          <i class="fa-solid fa-map-location-dot"></i>
+          <span>الخريطة التفاعلية</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-[50vh] sm:min-h-[55vh] flex items-center justify-center text-white text-center px-4 overflow-hidden">
+    <img src="images/qaitbay-1.jpg" alt="قلعة قايتباي" class="absolute inset-0 w-full h-full object-cover object-center" />
+    <div class="absolute inset-0 hero-gradient"></div>
+
+    <div class="relative z-10 max-w-4xl mx-auto py-12">
+      <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full text-brand-gold text-sm font-semibold mb-4 border border-white/15">
+        <i class="fa-solid fa-shield-halved"></i> العصر المملوكي / الإسلامي (1477م)
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold leading-tight mb-4">
+        قلعة الأشرف قايتباي
+      </h1>
+      <p class="text-base sm:text-lg text-slate-200 max-w-2xl mx-auto leading-relaxed font-light">
+        الأنفوشي، جزيرة فاروس سابقاً، الإسكندرية
+      </p>
+    </div>
+  </section>
+
+  <!-- تفاصيل المعلم والمواعيد والأسعار -->
+  <main class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+
+      <!-- العمود الأيمن: النبذة التاريخية وسرد الأثر (2/3 المساحة) -->
+      <div class="lg:col-span-2 space-y-10" id="info">
+
+        <!-- بطاقة النبذة التاريخية -->
+        <article class="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-gray-100">
+          <div class="flex items-center gap-3 mb-6 pb-4 border-b border-gray-100">
+            <div class="w-10 h-10 rounded-xl bg-brand-sand flex items-center justify-center text-brand-gold">
+              <i class="fa-solid fa-scroll text-lg"></i>
+            </div>
+            <div>
+              <h2 class="text-xl sm:text-2xl font-extrabold text-brand-dark">نبذة تاريخية وسرد الأثر</h2>
+              <span class="text-xs text-brand-gold font-bold">تأمين الثغور الساحلية الشمالية</span>
+            </div>
+          </div>
+
+          <div class="text-slate-600 text-sm sm:text-base leading-relaxed space-y-4 text-justify">
+            <p>
+              تعد <strong class="text-brand-dark">قلعة قايتباي</strong> واحدة من أبهى القلاع الدفاعية التاريخية على طول ساحل البحر الأبيض المتوسط. أنشأها السلطان المملوكي <strong class="text-brand-blue">الأشرف أبو النصر قايتباي عام 1477م</strong> فوق أطلال فنار الإسكندرية القديم.
+            </p>
+            <p>
+              استُخدمت أحجار الفنار المتهدم في بنائها لتحصين سواحل مصر الشمالية من هجمات الأساطيل الغازية، وكانت تضم حامية عسكرية متكاملة ومدافع ضخمة لحماية الميناء وسكان المدينة.
+            </p>
+          </div>
+        </article>
+
+        <!-- بطاقة عروض الصوت والضوء -->
+        <article class="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-gray-100">
+          <div class="flex items-center gap-3 mb-6 pb-4 border-b border-gray-100">
+            <div class="w-10 h-10 rounded-xl bg-brand-sand flex items-center justify-center text-brand-gold">
+              <i class="fa-solid fa-wand-magic-sparkles text-lg"></i>
+            </div>
+            <div>
+              <h2 class="text-xl sm:text-2xl font-extrabold text-brand-dark">عروض الصوت والضوء بقلعة قايتباي</h2>
+              <span class="text-xs text-brand-gold font-bold">تجربة مسائية تاريخية مبهرة بتقنيات الإضاءة والصوت</span>
+            </div>
+          </div>
+
+          <div class="space-y-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="p-4 bg-brand-sand/60 rounded-xl border-r-4 border-brand-blue">
+                <span class="block text-xs font-bold text-gray-500 mb-1">الحفلة الأولى</span>
+                <span class="text-lg font-extrabold text-brand-blue">08:30 مساءً</span>
+              </div>
+              <div class="p-4 bg-brand-sand/60 rounded-xl border-r-4 border-brand-gold">
+                <span class="block text-xs font-bold text-gray-500 mb-1">الحفلة الثانية</span>
+                <span class="text-lg font-extrabold text-brand-blue">09:30 مساءً</span>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-sm font-bold text-slate-700 mb-3">تذاكر عروض الصوت والضوء:</h3>
+              <div class="grid grid-cols-3 gap-3 text-center">
+                <div class="p-3 bg-gray-50 rounded-xl border border-gray-100">
+                  <span class="block text-xs text-gray-500 mb-1">تذكرة عادية</span>
+                  <span class="font-extrabold text-brand-dark text-base">150 ج.م</span>
+                </div>
+                <div class="p-3 bg-amber-50/60 rounded-xl border border-amber-100">
+                  <span class="block text-xs text-amber-700 font-bold mb-1">تذكرة VIP</span>
+                  <span class="font-extrabold text-brand-blue text-base">200 ج.م</span>
+                </div>
+                <div class="p-3 bg-gray-50 rounded-xl border border-gray-100">
+                  <span class="block text-xs text-gray-500 mb-1">أطفال</span>
+                  <span class="font-extrabold text-brand-dark text-base">85 ج.م</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- العمود الأيسر: كروت المواعيد، التذاكر، والموقع (1/3 المساحة) -->
+      <aside class="space-y-6" id="visiting">
+
+        <!-- كارت مواعيد العمل -->
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-9 h-9 rounded-xl bg-brand-blue text-brand-gold flex items-center justify-center text-base">
+              <i class="fa-regular fa-clock"></i>
+            </div>
+            <h3 class="text-lg font-bold text-brand-dark">ساعات العمل</h3>
+          </div>
+          
+          <div class="flex items-center justify-between p-3.5 bg-brand-sand rounded-xl text-sm mb-2">
+            <span class="font-bold text-slate-700">يومياً</span>
+            <span class="text-brand-blue font-extrabold">09:00 ص – 05:00 م</span>
+          </div>
+          <span class="text-xs text-gray-500 block leading-tight">
+            * تغلق شبابيك الحجز الصباحية قبل موعد الإغلاق المحدد.
+          </span>
+        </div>
+
+        <!-- كارت أسعار التذاكر -->
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-9 h-9 rounded-xl bg-brand-blue text-brand-gold flex items-center justify-center text-base">
+              <i class="fa-solid fa-ticket"></i>
+            </div>
+            <h3 class="text-lg font-bold text-brand-dark">رسوم الدخول</h3>
+          </div>
+
+          <!-- فئة المواطنين المصريين -->
+          <div class="mb-5">
+            <span class="text-xs font-bold text-brand-blue uppercase tracking-wider block mb-2 border-b border-gray-100 pb-1">
+              المواطنون المصريون
+            </span>
+            <div class="space-y-2 text-sm">
+              <div class="flex justify-between items-center bg-gray-50 p-2.5 rounded-lg">
+                <span class="text-slate-600">المواطن المصري</span>
+                <span class="font-bold text-brand-dark">60 ج.م</span>
+              </div>
+              <div class="flex justify-between items-center bg-gray-50 p-2.5 rounded-lg">
+                <span class="text-slate-600">الطالب المصري</span>
+                <span class="font-bold text-brand-dark">30 ج.م</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- فئة السائحين الأجانب -->
+          <div>
+            <span class="text-xs font-bold text-brand-gold uppercase tracking-wider block mb-2 border-b border-gray-100 pb-1">
+              السائحون الأجانب
+            </span>
+            <div class="space-y-2 text-sm">
+              <div class="flex justify-between items-center bg-gray-50 p-2.5 rounded-lg">
+                <span class="text-slate-600">السائح الأجنبي</span>
+                <span class="font-bold text-brand-dark">200 ج.م</span>
+              </div>
+              <div class="flex justify-between items-center bg-gray-50 p-2.5 rounded-lg">
+                <span class="text-slate-600">الطالب الأجنبي</span>
+                <span class="font-bold text-brand-dark">100 ج.م</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4 pt-3 border-t border-gray-100 text-xs text-gray-400 text-center">
+            الدفع متاح إلكترونياً عبر البطاقات البنكية في شباك التذاكر
+          </div>
+        </div>
+
+        <!-- كارت الموقع الجغرافي السريع -->
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-9 h-9 rounded-xl bg-brand-blue text-brand-gold flex items-center justify-center text-base">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <h3 class="text-lg font-bold text-brand-dark">الموقع الجغرافي</h3>
+          </div>
+          <p class="text-xs text-slate-600 mb-3 leading-relaxed">
+            الأنفوشي، جزيرة فاروس سابقاً، الإسكندرية (تطل مباشرة على البحر الأبيض المتوسط ومدخل الميناء الشرقي).
+          </p>
+          <a href="index.html#map-section" class="w-full bg-brand-blue hover:bg-brand-dark text-white font-bold py-2.5 px-4 rounded-xl text-xs transition flex items-center justify-center gap-2">
+            <i class="fa-solid fa-map"></i> عرض على خريطة الموقع
+          </a>
+        </div>
+
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-brand-dark text-slate-400 py-12 border-t border-slate-800 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-lg bg-brand-blue flex items-center justify-center text-brand-gold">
+          <i class="fa-solid fa-landmark-dome"></i>
+        </div>
+        <span class="font-extrabold text-white text-base brand-title">الإسكندرية الخالدة</span>
+      </div>
+      <p class="text-xs text-center sm:text-right">
+        جميع الحقوق محفوظة &copy; 2026 | بوابة التراث والآثار بالإسكندرية
+      </p>
+      <div class="flex items-center gap-4 text-slate-300 text-base">
+        <a href="index.html" class="hover:text-brand-gold transition text-xs font-bold">الرئيسية</a>
+        <a href="developer.html" class="hover:text-brand-gold transition text-xs font-bold">المطور</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

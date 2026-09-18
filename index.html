@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>آثار ومتاحف الإسكندرية الخالدة | بوابة السياحة والتراث</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;600;700;800&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#0a192f',
+              blue: '#0B2545',
+              gold: '#C5A880',
+              goldHover: '#b39366',
+              sand: '#F7F5F0',
+            }
+          },
+          fontFamily: {
+            heading: ['Alexandria', 'sans-serif'],
+            body: ['Cairo', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Cairo', sans-serif; background-color: #F7F5F0; color: #1e293b; }
+    h1, h2, h3, h4, .brand-title { font-family: 'Alexandria', sans-serif; }
+    .hero-gradient { background: linear-gradient(180deg, rgba(11, 37, 69, 0.75) 0%, rgba(10, 25, 47, 0.92) 100%); }
+    .map-btn-active {
+      background-color: #0B2545 !important;
+      color: #C5A880 !important;
+      border-color: #C5A880 !important;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(11, 37, 69, 0.2);
+    }
+  </style>
+</head>
+<body class="bg-brand-sand selection:bg-brand-gold selection:text-white">
+
+  <!-- Header / Navbar -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200/80 shadow-xs transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
+      
+      <!-- اللوجو والهوية -->
+      <a href="#home" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-2xl bg-brand-blue flex items-center justify-center text-brand-gold shadow-md group-hover:scale-105 transition-transform">
+          <i class="fa-solid fa-landmark-dome text-xl"></i>
+        </div>
+        <div>
+          <span class="block text-xl font-extrabold text-brand-blue brand-title leading-tight tracking-wide">الإسكندرية الخالدة</span>
+          <span class="text-xs text-brand-gold font-bold tracking-wider">عروس البحر المتوسط</span>
+        </div>
+      </a>
+
+      <!-- القائمة الرئيسية -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-bold text-slate-700">
+        <a href="#home" class="text-brand-blue hover:text-brand-gold transition">الرئيسية</a>
+        <a href="#monuments" class="hover:text-brand-gold transition">المعالم والمتاحف</a>
+        <a href="#map-section" class="hover:text-brand-gold transition">الخريطة التفاعلية</a>
+        <a href="#about-goal" class="hover:text-brand-gold transition">الهدف من الموقع</a>
+      </nav>
+
+      <!-- الأزرار -->
+      <div class="flex items-center gap-3">
+        <a href="developer.html" class="hidden sm:flex bg-brand-gold hover:bg-brand-goldHover text-white px-5 py-2.5 rounded-xl font-bold text-sm shadow-sm transition items-center gap-2">
+          <i class="fa-solid fa-user-tie"></i>
+          <span>مطور المشروع</span>
+        </a>
+
+        <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-xl bg-gray-100 text-brand-blue text-lg" aria-label="فتح القائمة">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- قائمة الموبايل -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-3 font-bold text-sm text-slate-700 shadow-lg">
+      <a href="#home" onclick="toggleMobileMenu()" class="block text-brand-blue">الرئيسية</a>
+      <a href="#monuments" onclick="toggleMobileMenu()" class="block hover:text-brand-gold">المعالم والمتاحف</a>
+      <a href="#map-section" onclick="toggleMobileMenu()" class="block hover:text-brand-gold">الخريطة التفاعلية</a>
+      <a href="#about-goal" onclick="toggleMobileMenu()" class="block hover:text-brand-gold">الهدف من الموقع</a>
+      <a href="developer.html" class="block text-brand-gold pt-2 border-t border-gray-100">صفحة المطور</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative min-h-[90vh] flex items-center justify-center text-white text-center px-4 overflow-hidden pt-10 pb-16">
+    <img src="images/hero.jpg" alt="قلعة قايتباي وكورنيش الإسكندرية" class="absolute inset-0 w-full h-full object-cover object-center scale-105 transition-transform duration-1000" />
+    <div class="absolute inset-0 hero-gradient"></div>
+
+    <div class="relative z-10 max-w-4xl mx-auto">
+      
+      <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-1.5 rounded-full text-brand-gold text-xs sm:text-sm font-semibold mb-6 border border-white/20 shadow-xs">
+        <i class="fa-solid fa-compass"></i>
+        <span>بوابة التراث والسياحة الأثرية</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+        حيث تلتقي الحضارات <br class="hidden sm:inline" />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-brand-gold to-yellow-400 drop-shadow-sm">بأمواج البحر المتوسط</span>
+      </h1>
+
+      <p class="text-sm sm:text-lg text-slate-200 max-w-2xl mx-auto mb-8 leading-relaxed font-light">
+        دليل رقمي شامل يعيد إحياء تراث الإسكندرية الأثري والمتحفي عبر مختلف العصور لخدمة الزائرين والباحثين وهواة التاريخ.
+      </p>
+
+      <!-- شريط البحث -->
+      <div class="relative max-w-2xl mx-auto z-30">
+        <div class="bg-white/20 backdrop-blur-xl p-2.5 sm:p-3 rounded-2xl shadow-2xl border border-white/30 flex flex-col sm:flex-row gap-2">
+          
+          <div class="relative flex-1 flex items-center">
+            <i class="fa-solid fa-magnifying-glass absolute right-4 text-slate-400 text-sm"></i>
+            <input 
+              type="text" 
+              id="monument-search-input"
+              oninput="handleSearch(this.value)"
+              placeholder="ابحث عن قلعة، متحف، مقبرة، أو عصر..." 
+              class="w-full pr-11 pl-4 py-3 rounded-xl bg-white text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold shadow-inner" 
+            />
+          </div>
+
+          <a href="#monuments" class="bg-brand-gold hover:bg-brand-goldHover text-white font-bold py-3 px-7 rounded-xl text-sm transition flex items-center justify-center gap-2 shadow-sm">
+            <span>استكشف المعالم</span>
+            <i class="fa-solid fa-arrow-left text-xs"></i>
+          </a>
+        </div>
+
+        <div id="search-results-box" class="hidden absolute top-full mt-2 inset-x-0 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden text-right z-50 max-h-72 overflow-y-auto">
+        </div>
+      </div>
+
+      <!-- الإحصائيات -->
+      <div class="mt-12 grid grid-cols-3 gap-3 max-w-xl mx-auto text-white">
+        <div class="bg-white/10 backdrop-blur-md p-3.5 rounded-2xl border border-white/15">
+          <span class="block text-2xl font-extrabold text-brand-gold">9</span>
+          <span class="text-[11px] sm:text-xs text-slate-300 font-semibold">مواقع ومتاحف رئيسية</span>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md p-3.5 rounded-2xl border border-white/15">
+          <span class="block text-2xl font-extrabold text-brand-gold">+2300</span>
+          <span class="text-[11px] sm:text-xs text-slate-300 font-semibold">عام من التاريخ الحي</span>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md p-3.5 rounded-2xl border border-white/15">
+          <span class="block text-2xl font-extrabold text-brand-gold">100%</span>
+          <span class="text-[11px] sm:text-xs text-slate-300 font-semibold">توثيق أثري وميداني</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- المعالم والمتاحف الـ 9 -->
+  <section id="monuments" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+      <div>
+        <span class="text-brand-gold font-bold text-sm uppercase tracking-wider block mb-2">الوجهات الأثرية والمتحفية</span>
+        <h2 class="text-3xl font-extrabold text-brand-dark">أشهر متاحف وآثار الإسكندرية</h2>
+      </div>
+      <p class="text-slate-600 max-w-md text-sm mt-3 md:mt-0">
+        اضغط على أي مَعلم لمعرفة تاريخه، مواعيد الزيارة، وأسعار التذاكر بالتفصيل.
+      </p>
+    </div>
+
+    <!-- شبكة الكروت -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- 1: قلعة قايتباي -->
+      <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group border border-gray-100">
+        <a href="qaitbay.html" class="relative h-52 overflow-hidden bg-slate-100 block">
+          <img src="images/qaitbay-1.jpg" alt="قلعة قايتباي" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <span class="absolute top-3 right-3 bg-brand-blue/90 text-brand-gold text-xs font-bold px-3 py-1 rounded-full shadow">عصر مملوكي</span>
+        </a>
+        <div class="p-5 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-lg font-bold text-slate-800 mb-2">
+              <a href="qaitbay.html" class="hover:text-brand-gold transition">قلعة قايتباي</a>
+            </h3>
+            <p class="text-slate-600 text-xs line-clamp-3 mb-4 leading-relaxed">شُيّدت عام 1477م فوق أطلال فنار الإسكندرية القديم وتعد من أعظم الحصون الساحلية بالبحر المتوسط.</p>
+          </div>
+          <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs">
+            <span class="text-gray-500"><i class="fa-regular fa-clock ml-1"></i> ساعتان</span>
+            <a href="qaitbay.html" class="text-brand-blue font-bold hover:text-brand-gold flex items-center gap-1">التفاصيل الكاملة <i class="fa-solid fa-angle-left"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2: المتحف اليوناني الروماني -->
+      <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group border border-gray-100">
+        <a href="graeco-roman.html" class="relative h-52 overflow-hidden bg-slate-100 block">
+          <img src="images/graeco-roman.jpg" alt="المتحف اليوناني الروماني" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <span class="absolute top-3 right-3 bg-brand-blue/90 text-brand-gold text-xs font-bold px-3 py-1 rounded-full shadow">يوناني - روماني</span>
+        </a>
+        <div class="p-5 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-lg font-bold text-slate-800 mb-2">
+              <a href="graeco-roman.html" class="hover:text-brand-gold transition">المتحف اليوناني الروماني</a>
+            </h3>
+            <p class="text-slate-600 text-xs line-clamp-3 mb-4 leading-relaxed">أكبر وأعرق متحف متخصص في آثار الحضارتين اليونانية والرومانية، يضم 27 قاعة عرض موضوعية.</p>
+          </div>
+          <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs">
+            <span class="text-gray-500"><i class="fa-regular fa-clock ml-1"></i> 2.5 ساعة</span>
+            <a href="graeco-roman.html" class="text-brand-blue font-bold hover:text-brand-gold flex items-center gap-1">التفاصيل الكاملة <i class="fa-solid fa-angle-left"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3: متحف المجوهرات الملكية -->
+      <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group border border-gray-100">
+        <a href="jewelry.html" class="relative h-52 overflow-hidden bg-slate-100 block">
+          <img src="images/royal-jewelry.jpg" alt="متحف المجوهرات الملكية" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <span class="absolute top-3 right-3 bg-brand-blue/90 text-brand-gold text-xs font-bold px-3 py-1 rounded-full shadow">الأسرة العلوية</span>
+        </a>
+        <div class="p-5 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-lg font-bold text-slate-800 mb-2">
+              <a href="jewelry.html" class="hover:text-brand-gold transition">متحف المجوهرات الملكية</a>
+            </h3>
+            <p class="text-slate-600 text-xs line-clamp-3 mb-4 leading-relaxed">قصر زينب فهمي المشيد عام 1919م بزيزينيا، يضم أكثر من 11,500 تحفة ومقتنى ملكي نادراً.</p>
+          </div>
+          <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs">
+            <span class="text-gray-500"><i class="fa-regular fa-clock ml-1"></i> ساعتان</span>
+            <a href="jewelry.html" class="text-brand-blue font-bold hover:text-brand-gold flex items-center gap-1">التفاصيل الكاملة <i class="fa-solid fa-angle-left"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4: متحف الإسكندرية القومي -->
+      <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group border border-gray-100">
+        <a href="national.html" class="relative h-52 overflow-hidden bg-slate-100 block">
+          <img src="images/national-museum.jpg" alt="متحف الإسكندرية القومي" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <span class="absolute top-3 right-3 bg-brand-blue/90 text-brand-gold text-xs font-bold px-3 py-1 rounded-full shadow">شامل كل العصور</span>
+        </a>
+        <div class="p-5 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-lg font-bold text-slate-800 mb-2">
+              <a href="national.html" class="hover:text-brand-gold transition">متحف الإسكندرية القومي</a>
+            </h3>
+            <p class="text-slate-600 text-xs line-clamp-3 mb-4 leading-relaxed">أول متحف قومي بمصر، يقع في قصر أسعد باسيلي بشارع فؤاد، ويضم 1800 قطعة عبر 3 طوابق تاريخية.</p>
+          </div>
+          <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs">
+            <span class="text-gray-500"><i class="fa-regular fa-clock ml-1"></i> ساعتان</span>
+            <a href="national.html" class="text-brand-blue font-bold hover:text-brand-gold flex items-center gap-1">التفاصيل الكاملة <i class="fa-solid fa-angle-left"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 5: المسرح الروماني -->
+      <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group border border-gray-100">
+        <a href="theater.html" class="relative h-52 overflow-hidden bg-slate-100 block">
+          <img src="images/amphitheatre.jpg" alt="المسرح الروماني" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <span class="absolute top-3 right-3 bg-brand-blue/90 text-brand-gold text-xs font-bold px-3 py-1 rounded-full shadow">يوناني - روماني</span>
+        </a>
+        <div class="p-5 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-lg font-bold text-slate-800 mb-2">
+              <a href="theater.html" class="hover:text-brand-gold transition">المسرح الروماني (كوم الدكة)</a>
+            </h3>
+            <p class="text-slate-600 text-xs line-clamp-3 mb-4 leading-relaxed">المدرج الروماني الوحيد في مصر، يضم مدرجات رخامية وحمامات أثرية وفيلا الطيور ذات الفسيفساء النادرة.</p>
+          </div>
+          <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs">
+            <span class="text-gray-500"><i class="fa-regular fa-clock ml-1"></i> 1.5 ساعة</span>
+            <a href="theater.html" class="text-brand-blue font-bold hover:text-brand-gold flex items-center gap-1">التفاصيل الكاملة <i class="fa-solid fa-angle-left"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 6: مقابر كوم الشقافة -->
+      <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group border border-gray-100">
+        <a href="catacombs.html" class="relative h-52 overflow-hidden bg-slate-100 block">
+          <img src="images/catacombs.jpg" alt="مقابر كوم الشقافة" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <span class="absolute top-3 right-3 bg-brand-blue/90 text-brand-gold text-xs font-bold px-3 py-1 rounded-full shadow">عجائب العصور الوسطى</span>
+        </a>
+        <div class="p-5 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-lg font-bold text-slate-800 mb-2">
+              <a href="catacombs.html" class="hover:text-brand-gold transition">مقابر كوم الشقافة</a>
+            </h3>
+            <p class="text-slate-600 text-xs line-clamp-3 mb-4 leading-relaxed">سراديب جنائزية فريدة محفورة بعمق 3 طوابق تحت الأرض تجمع ببراعة بين الطرازين الفرعوني والروماني.</p>
+          </div>
+          <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs">
+            <span class="text-gray-500"><i class="fa-regular fa-clock ml-1"></i> ساعتان</span>
+            <a href="catacombs.html" class="text-brand-blue font-bold hover:text-brand-gold flex items-center gap-1">التفاصيل الكاملة <i class="fa-solid fa-angle-left"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 7: عمود السواري -->
+      <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group border border-gray-100">
+        <a href="pompey.html" class="relative h-52 overflow-hidden bg-slate-100 block">
+          <img src="images/pompey.jpg" alt="عمود السواري" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <span class="absolute top-3 right-3 bg-brand-blue/90 text-brand-gold text-xs font-bold px-3 py-1 rounded-full shadow">عصر روماني</span>
+        </a>
+        <div class="p-5 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-lg font-bold text-slate-800 mb-2">
+              <a href="pompey.html" class="hover:text-brand-gold transition">عمود السواري</a>
+            </h3>
+            <p class="text-slate-600 text-xs line-clamp-3 mb-4 leading-relaxed">أعلى نصب تذكاري منفرد من الجرانيت في العالم القديم بارتفاع يتجاوز 26 متراً أقيم للإمبراطور دقلديانوس.</p>
+          </div>
+          <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs">
+            <span class="text-gray-500"><i class="fa-regular fa-clock ml-1"></i> ساعة واحدة</span>
+            <a href="pompey.html" class="text-brand-blue font-bold hover:text-brand-gold flex items-center gap-1">التفاصيل الكاملة <i class="fa-solid fa-angle-left"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 8: مقابر الشاطبي -->
+      <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group border border-gray-100">
+        <a href="shatby.html" class="relative h-52 overflow-hidden bg-slate-100 block">
+          <img src="images/shatby.jpg" alt="مقابر الشاطبي" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <span class="absolute top-3 right-3 bg-brand-blue/90 text-brand-gold text-xs font-bold px-3 py-1 rounded-full shadow">عصر بطلمي</span>
+        </a>
+        <div class="p-5 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-lg font-bold text-slate-800 mb-2">
+              <a href="shatby.html" class="hover:text-brand-gold transition">مقابر الشاطبي</a>
+            </h3>
+            <p class="text-slate-600 text-xs line-clamp-3 mb-4 leading-relaxed">أقدم مقبرة أثرية باقية بالإسكندرية تعود لأوائل العصر البطلمي، تمثل طراز المنازل الإغريقية القديمة المنحوتة في الصخر.</p>
+          </div>
+          <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs">
+            <span class="text-gray-500"><i class="fa-regular fa-clock ml-1"></i> ساعة واحدة</span>
+            <a href="shatby.html" class="text-brand-blue font-bold hover:text-brand-gold flex items-center gap-1">التفاصيل الكاملة <i class="fa-solid fa-angle-left"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 9: متاحف مكتبة الإسكندرية -->
+      <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group border border-gray-100">
+        <a href="bibliotheca.html" class="relative h-52 overflow-hidden bg-slate-100 block">
+          <img src="images/bibliotheca.jpg" alt="متاحف مكتبة الإسكندرية" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <span class="absolute top-3 right-3 bg-brand-blue/90 text-brand-gold text-xs font-bold px-3 py-1 rounded-full shadow">تراث حضاري وثقافي</span>
+        </a>
+        <div class="p-5 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-lg font-bold text-slate-800 mb-2">
+              <a href="bibliotheca.html" class="hover:text-brand-gold transition">متاحف مكتبة الإسكندرية</a>
+            </h3>
+            <p class="text-slate-600 text-xs line-clamp-3 mb-4 leading-relaxed">منارة إشعاع حضاري عالمية تضم باقة من أثرى المتاحف: متحف الآثار الغارقة والبرية، متحف المخطوطات، وتاريخ العلوم.</p>
+          </div>
+          <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs">
+            <span class="text-gray-500"><i class="fa-regular fa-clock ml-1"></i> 3 ساعات</span>
+            <a href="bibliotheca.html" class="text-brand-blue font-bold hover:text-brand-gold flex items-center gap-1">التفاصيل الكاملة <i class="fa-solid fa-angle-left"></i></a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- الخريطة التفاعلية -->
+  <section id="map-section" class="py-16 bg-white border-y border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-8">
+        <span class="text-brand-gold font-bold text-sm uppercase tracking-wider">خريطة المعالم الحية</span>
+        <h2 class="text-3xl font-extrabold text-brand-dark mt-1">تحديد المواقع على خريطة الإسكندرية</h2>
+        <p class="text-slate-600 text-sm mt-2">اختر أي مَعلم من الأسفل لمعاينة موقعه الجغرافي مباشرة على خريطة جوجل.</p>
+      </div>
+
+      <!-- أزرار المواقع -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-9 gap-2 mb-5 text-xs font-bold">
+        <button onclick="setMapLocation('qaitbay', this)" class="map-btn map-btn-active p-2.5 rounded-xl border border-gray-200 bg-gray-50 hover:bg-slate-100 transition text-center">
+          <i class="fa-solid fa-shield-halved block text-sm mb-1 text-brand-gold"></i> قلعة قايتباي
+        </button>
+        <button onclick="setMapLocation('graeco_roman', this)" class="map-btn p-2.5 rounded-xl border border-gray-200 bg-gray-50 hover:bg-slate-100 transition text-center">
+          <i class="fa-solid fa-columns block text-sm mb-1 text-brand-gold"></i> المتحف اليوناني
+        </button>
+        <button onclick="setMapLocation('jewelry', this)" class="map-btn p-2.5 rounded-xl border border-gray-200 bg-gray-50 hover:bg-slate-100 transition text-center">
+          <i class="fa-solid fa-gem block text-sm mb-1 text-brand-gold"></i> متحف المجوهرات
+        </button>
+        <button onclick="setMapLocation('national', this)" class="map-btn p-2.5 rounded-xl border border-gray-200 bg-gray-50 hover:bg-slate-100 transition text-center">
+          <i class="fa-solid fa-landmark block text-sm mb-1 text-brand-gold"></i> المتحف القومي
+        </button>
+        <button onclick="setMapLocation('theater', this)" class="map-btn p-2.5 rounded-xl border border-gray-200 bg-gray-50 hover:bg-slate-100 transition text-center">
+          <i class="fa-solid fa-masks-theater block text-sm mb-1 text-brand-gold"></i> المسرح الروماني
+        </button>
+        <button onclick="setMapLocation('catacombs', this)" class="map-btn p-2.5 rounded-xl border border-gray-200 bg-gray-50 hover:bg-slate-100 transition text-center">
+          <i class="fa-solid fa-archway block text-sm mb-1 text-brand-gold"></i> كوم الشقافة
+        </button>
+        <button onclick="setMapLocation('pompey', this)" class="map-btn p-2.5 rounded-xl border border-gray-200 bg-gray-50 hover:bg-slate-100 transition text-center">
+          <i class="fa-solid fa-monument block text-sm mb-1 text-brand-gold"></i> عمود السواري
+        </button>
+        <button onclick="setMapLocation('shatby', this)" class="map-btn p-2.5 rounded-xl border border-gray-200 bg-gray-50 hover:bg-slate-100 transition text-center">
+          <i class="fa-solid fa-dungeon block text-sm mb-1 text-brand-gold"></i> مقابر الشاطبي
+        </button>
+        <button onclick="setMapLocation('bibliotheca', this)" class="map-btn p-2.5 rounded-xl border border-gray-200 bg-gray-50 hover:bg-slate-100 transition text-center">
+          <i class="fa-solid fa-book-open-reader block text-sm mb-1 text-brand-gold"></i> متاحف المكتبة
+        </button>
+      </div>
+
+      <!-- إطار خريطة جوجل الحية -->
+      <div class="bg-brand-sand p-2 sm:p-3 rounded-2xl border border-gray-200 shadow-md">
+        <iframe 
+          id="main-interactive-map"
+          src="https://maps.google.com/maps?q=31.2140,29.8856&hl=ar&z=16&output=embed" 
+          width="100%" 
+          height="460" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          class="rounded-xl border border-gray-200 w-full">
+        </iframe>
+
+        <div class="mt-3 bg-white p-3.5 rounded-xl flex flex-col sm:flex-row items-center justify-between gap-3 text-xs border border-gray-100">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-emerald-500 animate-ping"></span>
+            <span class="text-slate-500 font-bold">الموقع المعروض حالياً:</span>
+            <strong id="active-site-name" class="text-brand-blue text-sm">قلعة قايتباي</strong>
+          </div>
+          <span class="text-gray-400">يمكنك التكبير والتحريك والتنقل المباشر عبر الخريطة</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about-goal" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-brand-blue text-white rounded-3xl p-8 sm:p-12 shadow-xl relative overflow-hidden">
+      <div class="absolute -right-10 -bottom-10 opacity-10 text-9xl">
+        <i class="fa-solid fa-landmark"></i>
+      </div>
+      <div class="relative z-10 max-w-3xl">
+        <span class="text-brand-gold font-bold text-sm uppercase tracking-wider block mb-2">رؤية المشروع</span>
+        <h2 class="text-2xl sm:text-4xl font-extrabold mb-6">إحياء التراث السكندري برؤية رقمية حديثة</h2>
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6 font-light">
+          يهدف هذا المشروع لتقديم مرجع موثوق وتفاعلي يجمع أهم متاحف ومعالم عروس البحر الأبيض المتوسط الأثرية، مع توفير كل ما يحتاجه السائح والباحث من توثيق تاريخي، إحداثيات جغرافية دقيقة، ومواعيد ورسوم الزيارة المحدثة.
+        </p>
+        <div class="flex flex-wrap gap-4 text-xs font-semibold text-brand-gold">
+          <div class="flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-lg border border-white/10">
+            <i class="fa-solid fa-check"></i> توثيق أثري معتمد
+          </div>
+          <div class="flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-lg border border-white/10">
+            <i class="fa-solid fa-check"></i> خرائط جغرافية حية
+          </div>
+          <div class="flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-lg border border-white/10">
+            <i class="fa-solid fa-check"></i> دليل رقمي مفتوح المصدر
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-brand-dark text-slate-400 py-12 border-t border-slate-800 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-lg bg-brand-blue flex items-center justify-center text-brand-gold">
+          <i class="fa-solid fa-landmark-dome"></i>
+        </div>
+        <span class="font-extrabold text-white text-base brand-title">الإسكندرية الخالدة</span>
+      </div>
+      <p class="text-xs text-center sm:text-right">
+        جميع الحقوق محفوظة &copy; 2026 | بوابة التراث والآثار بالإسكندرية
+      </p>
+      <div class="flex items-center gap-4 text-slate-300 text-base">
+        <a href="https://github.com/" target="_blank" class="hover:text-brand-gold transition"><i class="fa-brands fa-github"></i></a>
+        <a href="developer.html" class="hover:text-brand-gold transition"><i class="fa-solid fa-code"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+
+    const searchDatabase = [
+      { title: "قلعة قايتباي", era: "عصر مملوكي / إسلامي", url: "qaitbay.html", icon: "fa-shield-halved" },
+      { title: "المتحف اليوناني الروماني", era: "يوناني - روماني - قبطي", url: "graeco-roman.html", icon: "fa-columns" },
+      { title: "متحف المجوهرات الملكية", era: "الأسرة العلوية / زيزينيا", url: "jewelry.html", icon: "fa-gem" },
+      { title: "متحف الإسكندرية القومي", era: "شامل لكل العصور / شارع فؤاد", url: "national.html", icon: "fa-landmark" },
+      { title: "المسرح الروماني", era: "كوم الدكة / روماني", url: "theater.html", icon: "fa-masks-theater" },
+      { title: "مقابر كوم الشقافة", era: "فرعوني - يوناني - روماني / كرموز", url: "catacombs.html", icon: "fa-archway" },
+      { title: "عمود السواري", era: "عصر روماني / هضبة السيرابيوم", url: "pompey.html", icon: "fa-monument" },
+      { title: "مقابر الشاطبي الأثرية", era: "عصر بطلمي / أقدم مقابر الإسكندرية", url: "shatby.html", icon: "fa-dungeon" },
+      { title: "متاحف مكتبة الإسكندرية", era: "متحف الآثار والمخطوطات وتاريخ العلوم", url: "bibliotheca.html", icon: "fa-book-open-reader" }
+    ];
+
+    function handleSearch(query) {
+      const box = document.getElementById('search-results-box');
+      const cleanQuery = query.trim().toLowerCase();
+
+      if (!cleanQuery) {
+        box.classList.add('hidden');
+        box.innerHTML = '';
+        return;
+      }
+
+      const matches = searchDatabase.filter(item => 
+        item.title.toLowerCase().includes(cleanQuery) || 
+        item.era.toLowerCase().includes(cleanQuery)
+      );
+
+      if (matches.length === 0) {
+        box.innerHTML = `
+          <div class="p-4 text-xs text-gray-500 text-center">
+            لا توجد معالم مطابقة لـ "${query}"
+          </div>
+        `;
+      } else {
+        box.innerHTML = matches.map(item => `
+          <a href="${item.url}" class="flex items-center justify-between p-3.5 hover:bg-brand-sand transition border-b border-gray-50 last:border-none">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-brand-sand text-brand-blue flex items-center justify-center text-xs">
+                <i class="fa-solid ${item.icon}"></i>
+              </div>
+              <div>
+                <strong class="block text-sm text-brand-dark">${item.title}</strong>
+                <span class="text-[11px] text-gray-400">${item.era}</span>
+              </div>
+            </div>
+            <span class="text-xs text-brand-gold font-bold">عرض الصفحة &larr;</span>
+          </a>
+        `).join('');
+      }
+
+      box.classList.remove('hidden');
+    }
+
+    document.addEventListener('click', (e) => {
+      const searchInput = document.getElementById('monument-search-input');
+      const box = document.getElementById('search-results-box');
+      if (box && searchInput && !searchInput.contains(e.target) && !box.contains(e.target)) {
+        box.classList.add('hidden');
+      }
+    });
+
+    const mapLocations = {
+      qaitbay: {
+        name: "قلعة قايتباي",
+        src: "https://maps.google.com/maps?q=31.2140,29.8856&hl=ar&z=16&output=embed"
+      },
+      graeco_roman: {
+        name: "المتحف اليوناني الروماني",
+        src: "https://maps.google.com/maps?q=31.2003,29.9048&hl=ar&z=16&output=embed"
+      },
+      jewelry: {
+        name: "متحف المجوهرات الملكية",
+        src: "https://maps.google.com/maps?q=31.2407,29.9634&hl=ar&z=16&output=embed"
+      },
+      national: {
+        name: "متحف الإسكندرية القومي",
+        src: "https://maps.google.com/maps?q=31.2001,29.9132&hl=ar&z=16&output=embed"
+      },
+      theater: {
+        name: "المسرح الروماني (كوم الدكة)",
+        src: "https://maps.google.com/maps?q=31.1951,29.9042&hl=ar&z=16&output=embed"
+      },
+      catacombs: {
+        name: "مقابر كوم الشقافة",
+        src: "https://maps.google.com/maps?q=31.1788,29.8931&hl=ar&z=16&output=embed"
+      },
+      pompey: {
+        name: "عمود السواري",
+        src: "https://maps.google.com/maps?q=31.1825,29.8967&hl=ar&z=16&output=embed"
+      },
+      shatby: {
+        name: "مقابر الشاطبي الأثرية",
+        src: "https://maps.google.com/maps?q=31.20967,29.91942&hl=ar&z=16&output=embed"
+      },
+      bibliotheca: {
+        name: "متاحف مكتبة الإسكندرية",
+        src: "https://maps.google.com/maps?q=31.2089,29.9092&hl=ar&z=16&output=embed"
+      }
+    };
+
+    function setMapLocation(siteKey, btnElement) {
+      const site = mapLocations[siteKey];
+      if (!site) return;
+
+      const mapIframe = document.getElementById('main-interactive-map');
+      const activeNameLabel = document.getElementById('active-site-name');
+
+      mapIframe.src = site.src;
+      activeNameLabel.textContent = site.name;
+
+      document.querySelectorAll('.map-btn').forEach(btn => {
+        btn.classList.remove('map-btn-active');
+      });
+
+      if (btnElement) {
+        btnElement.classList.add('map-btn-active');
+      }
+    }
+  </script>
+</body>
+</html>
